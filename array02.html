@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 建立資料
+      let grades = [70, 50, 84];
+      grades.push(35);
+      grades.push(100);
+  
+      // 顯示全部成績
+      document.write("<h3>所有成績：</h3>");
+      for (let i = 0; i < grades.length; i++) {
+        document.write("第 " + (i + 1) + " 筆成績：" + grades[i] + "<br>");
+      }
+  
+      // 計算總分與平均
+      let sum = 0;
+      for (let i = 0; i < grades.length; i++) {
+        sum += grades[i];
+      }
+  
+      let average = sum / grades.length;
+  
+      // 顯示總分與平均
+      document.write("<h3>總分：" + sum + "</h3>");
+      document.write("<h3>平均：" + average.toFixed(2) + "</h3>");
+    </script>
+  </body>
+  
+</html>

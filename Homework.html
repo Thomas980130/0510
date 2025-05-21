@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 二維陣列：姓名 + 各科成績
+      let scores = [
+        ["王大同", 85, 88, 77],
+        ["林麥可", 99, 86, 89],
+        ["張淑芬", 75, 92, 86]
+      ];
+  
+      // 顯示標題列
+      document.write("<table border='1'>");
+      document.write("<tr><th>姓名</th><th>國文</th><th>英文</th><th>數學</th><th>總分</th></tr>");
+  
+      // 逐行處理陣列資料
+      for (let i = 0; i < scores.length; i++) {
+        let name = scores[i][0];
+        let chinese = scores[i][1];
+        let english = scores[i][2];
+        let math = scores[i][3];
+        let total = chinese + english + math;
+  
+        // 輸出每位學生資料
+        document.write("<tr>");
+        document.write("<td>" + name + "</td>");
+        document.write("<td>" + chinese + "</td>");
+        document.write("<td>" + english + "</td>");
+        document.write("<td>" + math + "</td>");
+        document.write("<td>" + total + "</td>");
+        document.write("</tr>");
+      }
+  
+      document.write("</table>");
+    </script>
+  </body>
+</html>
